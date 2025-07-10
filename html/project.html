@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- my projects -->
+  <title>Projects</title>
+
+  <!-- Boxicons CDN for icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- linked to stylesheet -->
+  <link rel="stylesheet" href="../css/projects_styles.css" />
+    <link rel="icon" href="../images/icon/icon-project.png" />
+</head>
+
+<!-- body of the page -->
+<body class="background-class">
+    
+    <!-- Navigation Bar with the back button -->
+    <nav>
+        <button id="back-button" >
+        <a id="back-button-1" href="../html/index.html">← Back</a>
+        </button>
+    </nav>
+
+    <!-- JavaScript for back button functionality -->
+    <script>
+        document.getElementById('back-button').addEventListener('click', function() {window.history.back();});
+    </script>
+
+    <div class="explore-class">
+        <i class="fa-sharp-duotone fa-solid fa-book fa-beat fa-lg"></i>
+        <h1>Let's <br />  <span>Explore</span> </h1>
+        <div class="explore-class-1"></div>
+    </div>
+    
+    <!-- Project Container -->
+    <div class="cards-container">
+        <!--------
+        Card 1
+        ---------->
+        <div class="card">
+            <div class="card-header pink">
+                <i class="fa-solid fa-list-check"></i>  
+                <h2>Research Project 1</h2>
+            </div>
+            <div class="card-body">
+                <p>Discover pain points and understand user behavior</p>
+            </div>
+            <div class="card-footer">
+                <button class="read-more">Research Project Description  </button>
+            </div>
+        </div>
+
+        <!---------
+        Card 2
+        ---------->
+        <div class="card">
+            <div class="card-header blue">
+                <i class='bx  bx-paper-plane'></i> 
+                <h2>Research Project 2</h2>
+            </div>
+            <div class="card-body">
+                <p>Validate ideas with an interactive prototype of your vision</p>
+            </div>
+            <div class="card-footer">
+                <button class="read-more">Research Project Description</button>
+            </div>
+        </div>
+
+        <!---------
+        Card 3
+        ---------->
+        <div class="card">
+            <div class="card-header green">
+                <i class="fa-solid fa-diagram-project"></i> 
+                <h2>ML Project 1</h2>
+            </div>
+            <div class="card-body">
+                <p>Launch an MVP with best-in-class user experience</p>
+            </div>
+            <div class="card-footer">
+                <button class="read-more">ML Project Description</button>
+            </div>
+        </div>
+
+        <!----------
+        Card 4
+        ----------->
+        <div class="card">
+            <div class="card-header yellow">
+                <i class="fa-duotone fa-solid fa-diagram-project fa-flip-horizontal"></i> 
+                <h2>ML Project 2</h2>
+            </div>
+            <div class="card-body">
+                <p>Become a category leader with designops and UX/UI design</p>
+            </div>
+            <div class="card-footer">
+                <button class="read-more">ML Project Description</button>
+            </div>
+        </div>
+
+        <!----------
+        Card 5
+        ----------->
+        <div class="card">
+            <div class="card-header purple">
+                <i class="fa-solid fa-clipboard fa-flip"></i> 
+                <h2>Marketing Project</h2>
+            </div>
+            <div class="card-body">
+                <p>Easily manage your projects and tasks</p>
+            </div>
+            <div class="card-footer">
+                <button class="read-more">Marketing Project Description</button>
+            </div>
+        </div>
+
+        <!----------
+        Card 6
+        ------------>
+        <div class="card">
+            <div class="card-header pink">
+                <i class="fa-duotone fa-solid fa-bars-progress fa-bounce"></i> 
+                <h2>Industrial Project</h2>
+            </div>
+            <div class="card-body">
+                <p>Amet porttitor eget dolor morbi non. Facilisis volutpat est velit egestas.</p>
+            </div>
+            <div class="card-footer">
+                <button class="read-more">About Project Description</button>
+            </div>
+        </div>
+
+        <!----------
+        Card 7
+        ------------>
+        <div class="card">
+            <div class="card-header violet">
+                <i class="fa-solid fa-bars-progress fa-beat-fade"></i>  
+                <h2>Industrail Management</h2>
+            </div>
+            <div class="card-body">
+                <p>Amet porttitor eget dolor morbi non. Facilisis volutpat est velit egestas.</p>
+            </div>
+            <div class="card-footer">
+                <button class="read-more">Industrail Project Description</button>
+            </div>
+        </div>
+    
+        <!----------
+        Card 8
+        ------------>
+        <div class="card">
+            <div class="card-header skyblue">
+                <i class="fa-solid fa-list-check fa-beat"></i>
+                <h2>Management Project</h2>
+            </div>
+            <div class="card-body">
+                <p>Amet porttitor eget dolor morbi non. Facilisis volutpat est velit egestas.</p>
+            </div>
+            <div class="card-footer">
+                <button class="read-more">Management Project Description</button>
+            </div>
+        </div>
+    </div>
+
+  <!-- Modal for full description -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div class="modal-text">
+        <!-- Full description details will appear here -->
+        <p>This is the full description. Update this content with your complete project details.</p>
+      </div>
+    </div>
+  </div>
+
+   <!-- ---------------------------------------
+    Footer Part
+    -------------------------------------------->
+    <footer class="footer">
+
+        <div class="social">
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class='bx bxl-meta'></i></a>
+            <a href="https://www.linkedin.com/in/ankit-rathaur/"><i class='bx bxl-linkedin' ></i></a>
+            <a href="C:\Users\ratha\OneDrive\Desktop\Portfolio Projects\indexPage.html"><i class='bx bx-link' ></i></a>
+            <a href="https://github.com/t-Ankit-Rathaur?tab=repositories"><i class='bx bxl-github' ></i></a>
+            <a href="mailto:ankitrathaur.du.or.26@gmail.com"><i class='bx bxl-gmail' ></i></a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">About Me</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+        </ul>
+
+        <p class="copyright">All Rights Reserved &#169; 2025 | Ankit</p>
+    </footer>
+
+<!---------------------------------------------
+ JavaScript to handle modal behavior 
+----------------------------------------------->
+  <script>
+    const modal = document.getElementById('modal');
+    const modalText = document.querySelector('.modal-text');
+    const closeBtn = document.querySelector('.close-btn');
+    const readMoreButtons = document.querySelectorAll('.read-more');
+
+// Simple handler: all buttons open the same modal content.
+// You could extend it to load different full-content based on the card.
+
+    readMoreButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        modal.style.display = 'block';
+      });
+    });
+
+    closeBtn.addEventListener('click', function () {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function (e) {
+      if (e.target == modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

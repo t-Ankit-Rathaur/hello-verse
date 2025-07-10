@@ -1,0 +1,386 @@
+/*---------------------------------------------------
+  CSS Custom Properties
+---------------------------------------------------*/
+:root {
+  --primary-color: #1a1a1a;
+  --accent-color: #ff4500;
+  --light-bg: #fefefe;
+  --dark-bg: #111;
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --transition: 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --font-family: 'Poppins', sans-serif;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/*----------------------------------------------------
+  Reset default browser styles
+------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*---------------------------------------------------
+General styling for the page
+-----------------------------------------------------*/
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  line-height: 1.6;
+  /* padding: 20px; */
+}
+
+/*----------------------------------------------------
+Back-Button
+------------------------------------------------------*/
+
+/* Styling for the navigation bar */
+nav {
+  margin: 40px 0px 20px 20px;
+}
+
+/* Back button styling */
+#back-button {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
+
+#back-button-1 {
+  color: var(--light-bg);
+  text-decoration: none;
+}
+
+/* Hover and active states for the back button */
+#back-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#back-button:active {
+  transform: scale(0.98);
+}
+
+/* Styling for the About section */
+
+#about {
+  margin-top: 40px;
+}
+
+.contact-information {
+  max-width: 1200px;
+  font-size: 2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 50px auto 10px auto;
+  border-radius: 10px;
+}
+
+ h1 {
+    font-weight: 10;
+    text-shadow: #111;
+}
+
+/*------------------------------------------------
+  Main container with two-column flex layout 
+---------------------------------------------------*/
+.container {
+  max-width: 1200px;
+  margin: 10px auto 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/*-----------------------------------------------
+ Left section: Contact Information
+-------------------------------------------------*/
+
+.contact-info {
+  flex: 1 1 45%;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #333, black);
+  color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contact-info h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contact-info .description {
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+
+.info-list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.info-list li {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+
+.info-list li i {
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #e74c3c;
+}
+
+span {
+  text-indent: 5%;
+}
+
+/*------------------------------------------------
+ Social media icons : hover effects
+--------------------------------------------------*/
+.social-icons a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #e74c3c;
+}
+
+/*---------------------------------------------------
+ Right section: Contact Form
+---------------------------------------------------*/
+
+.contact-form {
+  flex: 1 1 60%;
+  padding: 40px;
+  background-color: #fff;
+  word-wrap: break-word;
+}
+
+.contact-form h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.contact-form form {
+  width: 100%;
+}
+
+/*---------------------------------------------------
+ Right section: Google-Contact-Form
+---------------------------------------------------*/
+
+.google-contact-form {
+  display: flex;
+  flex: 1 1 45%;
+  min-width: 250px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.contact-form-1 {
+  width: 100%;
+  height: 1385px; 
+  border: none;
+}
+
+/*------------------------------------------------------
+ Row grouping for first/last name fields
+--------------------------------------------------------*/
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #e74c3c;
+  outline: none;
+}
+
+/*----------------------------------------------------
+ Ensure first name and last name groups split equally
+------------------------------------------------------*/
+.form-row .form-group {
+  flex: 1;
+}
+
+/*----------------------------------------------------
+ Submit button styling with hover effect
+------------------------------------------------------*/
+.contact-form button {
+  display: block;
+  width: 100%;
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: black;
+}
+
+/*---------------------------------------------------
+  Footer Section
+-----------------------------------------------------*/
+.footer {
+  background: #111;
+  padding: 100px 10%;
+  margin-top: 50px;
+  text-align: center;
+  color: #ddd;
+  animation: fadeIn 1s ease-out;
+}
+
+.footer .social {
+  margin-bottom: 20px;
+}
+
+.footer .social a {
+  margin: 0 10px;
+  font-size: 1.8rem;
+  color: #ddd;
+  transition: color var(--transition);
+} 
+
+.footer .social a:hover {
+  color: var(--accent-color);
+}
+
+.footer .list {
+  margin: 20px 0;
+}
+
+.footer .list li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer .list li a {
+  color: #ddd;
+  font-size: 1rem;
+  transition: color var(--transition);
+}
+
+.footer .list li a:hover {
+  color: var(--accent-color);
+}
+
+.footer .copyright {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/*---------------------------------------------------
+  Custom Scrollbar
+---------------------------------------------------*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/*---------------------------------------------------
+  Keyframe Animations
+---------------------------------------------------*/
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/*--------------------------------------------------
+  Responsive styles for mobile devices 
+----------------------------------------------------*/
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 20px;
+  }
+  
+  .contact-info,
+  .contact-form {
+    flex: 1 1 100%;
+    padding: 20px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
