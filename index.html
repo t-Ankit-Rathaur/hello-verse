@@ -120,20 +120,41 @@
         </div>
     </aside>
 
-    <!-- java-scripts aside-code -->
-    <script>
-        const header = document.getElementById("dynamic-header");
-        const sidebar = document.getElementById("sidebar");
-
-        window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-            header.classList.add("hide");
-            sidebar.classList.add("show");
-        } else {
-            header.classList.remove("hide");
-            sidebar.classList.remove("show");
+    <!-- for greater than max-width: 768px it will display aside-section other it will merge with header-section -->
+    <style>
+        @media (max-width: 768px) {
+            #sidebar {
+                display: none; /* Hide aside in mobile */
+            }
         }
-        });
+
+    </style>
+
+    <!-- java-script code for aside-section merge with header-section -->
+    <script>
+        const aside = document.getElementById('sidebar');
+        const header = document.getElementById('dynamic-header');
+        let mobileWrapper;
+
+        function moveAsideToHeader() {
+            if (window.innerWidth <= 768 && !mobileWrapper) {
+
+            // Create mobile wrapper if not already present
+            mobileWrapper = document.createElement('div');
+            mobileWrapper.className = 'mobile-sidebar-content';
+            mobileWrapper.innerHTML = aside.innerHTML;
+            header.appendChild(mobileWrapper);
+            } else if (window.innerWidth > 768 && mobileWrapper) {
+
+            // Remove mobile content when back to large screen
+            mobileWrapper.remove();
+            mobileWrapper = null;
+            }
+        }
+
+        // Call on load and on resize
+        window.addEventListener('load', moveAsideToHeader);
+        window.addEventListener('resize', moveAsideToHeader);
 
     </script>
 
