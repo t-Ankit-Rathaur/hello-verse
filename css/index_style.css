@@ -801,6 +801,7 @@ Contact-Form Section 4
   .header {
     flex-direction: column;
     padding: 15px 5%;
+    width: 100%;
   }
 
   .navbar {
@@ -810,10 +811,30 @@ Contact-Form Section 4
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  
+  /* Change in main content page */
+  .main-content-page {
+    width: 100%;
+    margin: 0%;
+  }
 
   .home {
     flex-direction: column;
     padding: 120px 5% 60px;
+    width: 100%;
+  }
+
+  .education-sec {
+    width: 100%;
+  }
+  .about {
+    width: 100%;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .footer {
+    width: 100%;
   }
 
   .img-box img {
